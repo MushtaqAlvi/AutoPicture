@@ -1,0 +1,1 @@
+cat names.txt | while read name ; do echo $name Editing;convert -size 880x150  -background "transparent" -gravity "center" label:"${name}" -rotate 4.9 "OutPut/${name}.png";convert input.jpeg -compose over "OutPut/${name}.png" -geometry +200+665  -composite  "OutPut/${name}.png";done
